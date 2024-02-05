@@ -1,0 +1,18 @@
+.header-navigation {
+  height: 121px;
+  width: 100vw;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--first-color-100);
+
+  .header-navigation-command {
+    font-size: var(--medium-font);
+  }
+
+  .header-navigation-title {
+    font-size: var(--s-large-font);
+    text-transform: capitalize;
+  }
+}

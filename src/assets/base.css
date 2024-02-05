@@ -2,54 +2,44 @@
 
 :root {
   /*========== Colors ==========*/
-  --first-color-50: #f8f8f8;
-  --first-color-100: #efefef;
-  --first-color-200: #dcdcdc;
-  --first-color-300: #bdbdbd;
-  --first-color-400: #989898;
-  --first-color-500: #7c7c7c;
-  --first-color-600: #656565;
-  --first-color-700: #525252;
-  --first-color-800: #464646;
-  --first-color-900: #3d3d3d;
-  --first-color-950: #292929;
+  --first-color-0: #ffffff;
+  --first-color-50: #f7f6f5;
+  --first-color-100: #eceae8;
+  --first-color-200: #dfdbd7;
+  --first-color-300: #c0b8b1;
+  --first-color-400: #a69991;
+  --first-color-500: #94847b;
+  --first-color-600: #88766e;
+  --first-color-700: #71625d;
+  --first-color-800: #5e514e;
+  --first-color-900: #4d4441;
+  --first-color-950: #282322;
 
-  --secondary-color-50: #eef6ff;
-  --secondary-color-100: #d9eaff;
-  --secondary-color-200: #bcdbff;
-  --secondary-color-300: #8ec6ff;
-  --secondary-color-400: #59a5ff;
-  --secondary-color-500: #3a86ff;
-  --secondary-color-600: #1b60f5;
-  --secondary-color-700: #144be1;
-  --secondary-color-800: #173db6;
-  --secondary-color-900: #19388f;
-  --secondary-color-950: #142357;
+  --color-nmeric-number: #E40604;
+  --color-notwork-button: #D94D4D;
 
-  --border-color: #EAEAEA;
+  --background--right-side: #dcdcdc;
+  --background-icon-card: #2B2C34;
 
-  --banner-social-color: #D9D9D9;
-  --icon-social-color: rgba(128, 128, 128, 0.2);
+  --border-color-button: rgba(152, 152, 152, 0.50);
+  --border-shadow-button: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
 
-  --banner-header-color: rgba(217, 217, 217, 0.10);
+  --border-card-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
-  --circle-primary-color: #D8FF19;
-  --circle-secondary-color: #202020;
+  --border-openwork-color: rgba(96, 188, 135, 0.5);
+  --border-notwork-color: rgba(217, 77, 77, 0.5);
 
-  --response-primary-color: #090909;
-  --response-danger-color: #E50914;
-  --response-sucess-color: #1B5E20;
+  --background-scroll: #353535;
+  --border-scroll: #D9D9D9;
 
-  --background-primary-color: #1E1E1E;
-  --background-secondary-color: #1E1E1E;
-  --background-linear-color: linear-gradient(180deg, #090909 0%, #313131 100%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
   --extra-large-font: 3.75rem; /* 60px */
   --xx-large-font: 3.125rem; /* 50px */
   --x-large-font: 2.75rem; /* 44px */
   --large-font: 2.5rem; /* 40px */
+  --s-large-font: 1.875rem; /* 30px */
+  --x-medium-large-font: 1.75rem; /*28px*/
   --medium-large-font: 1.375rem; /* 22px */
   --medium-font: 1.25rem; /* 20px */
   --normal-font: 1.125rem; /* 18px */
@@ -57,14 +47,17 @@
   --small-medium-font: 0.875rem; /* 14px */
   --small-font: 0.75rem; /* 12px */
   --extra-small-font: 0.625rem; /* 10px */
+  --giga-small-font: 0.5rem; /* 8px */
 
   /*========== Border Radius ==========*/
-  --extra-boder-radius: 100px;
-  --large-border-radius: 45px;
-  --normal-border-radius: 20px;
+  --extra-boder-radius: 150px;
+  --large-border-radius: 26px;
+  --normal-border-radius: 15px;
   --small-border-radius: 10px;
 
   /*========== Font weight ==========*/
+  --very-small-font-weight: 300;
+  --small-font-weight: 400;
   --medium-font-weight: 500;
   --normal-font-weight: 600;
   --large-font-weight: 700;
@@ -76,7 +69,7 @@
   --tablette-screen : 768px;
   --tablette-screen-xl : 896px;
   --laptop-screen : 1024px;
-  --laptop-screen-xl : 1232px;
+  --laptop-screen-xl : 1378px;
   --medium-screen : 1440px;
   --medium-screen-xl : 1680px;
   --large-screen : 1920px;
@@ -103,11 +96,11 @@ html {
 
 body {
   min-height: 100vh;
-  color: var(--first-color-50);
-  background: var(--background-primary-color);
+  color: var(--first-color-950);
+  background: var(--first-color-0);
   line-height: 1.6;
   font-family:
-          Poppins,
+          Trispace,
           Inter,
           -apple-system,
           BlinkMacSystemFont,
@@ -120,7 +113,8 @@ body {
           'Droid Sans',
           'Helvetica Neue',
           sans-serif;
-  font-size: 14px;
+  font-size: var(--base-font);
+  font-weight: var(--small-font-weight);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
