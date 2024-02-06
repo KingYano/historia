@@ -1,4 +1,4 @@
 .painting-detail {
-  height: var(100vh - 121px);
-  background: red;
+  height: calc(100vh - 121px);
+  background: var(--first-color-50);
 }
