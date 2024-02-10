@@ -1,6 +1,52 @@
 .painting-detail {
-  height: calc(100vh - 121px);
+  height: 100%;
   background: var(--first-color-50);
+  padding: 70px 30px 15px;
+
+  .painting-detail-text {
+    &-title {
+      font-size: var(--s-large-font);
+      font-weight: var(--normal-font-weight);
+      padding-bottom: 15px;
+    }
+
+    &-subtitle {
+      font-size: var(--medium-font);
+      font-weight: var(--medium-font-weight);
+      padding-bottom: 15px;
+    }
+
+    &-location {
+      padding-bottom: 10px;
+    }
+
+    &-characteristic {
+      padding-bottom: 35px;
+    }
+
+    &-paragraph {
+      .first-paragraph, .second-paragraph {
+        padding-bottom: 10px;
+      }
+
+      .first-paragraph:last-child {
+        padding-bottom: 25px;
+        border: solid red;
+      }
+
+      .second-paragraph:last-child {
+        padding-bottom: 40px;
+      }
+    }
+
+  }
 
 
+}
+
+
+@media (min-width: 1024px) {
+  .painting-detail {
+
+  }
 }
