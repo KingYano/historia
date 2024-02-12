@@ -22,8 +22,6 @@
 
 <script setup lang="ts">
   import {computed} from "vue";
-  import {types} from "sass";
-  import String = types.String;
 
   const props = defineProps({
     mainTitle: String,
