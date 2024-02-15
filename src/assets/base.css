@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal?styles=158867,158871,158869,158866');
 
 :root {
   /*========== Colors ==========*/
@@ -64,17 +64,6 @@
   --extra-large-font-weight: 800;
   --maximum-font-weight: 900;
 
-
-  /*========== Breakpoint screen ==========*/
-  --tablette-screen : 768px;
-  --tablette-screen-xl : 896px;
-  --laptop-screen : 1024px;
-  --laptop-screen-xl : 1378px;
-  --medium-screen : 1440px;
-  --medium-screen-xl : 1680px;
-  --large-screen : 1920px;
-  --extra-large-screen : 2048px;
-  --giga-large-screen : 3840px;
 }
 
 *,
@@ -100,7 +89,7 @@ body {
   background: var(--first-color-0);
   line-height: 1.6;
   font-family:
-          Trispace,
+          'PP Neue Montreal',
           Inter,
           -apple-system,
           BlinkMacSystemFont,

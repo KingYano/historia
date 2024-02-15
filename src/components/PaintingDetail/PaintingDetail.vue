@@ -6,7 +6,7 @@
       <p class="painting-detail-text-location">{{ infoLocation }}</p>
       <p class="painting-detail-text-characteristic">{{ infoCharacteristic }}</p>
       <div class="painting-detail-text-paragraph">
-        <p v-for="(firstParagraph, index) in firstParagraphSentences" :key="`first-${index}`" class="first-paragraph">
+        <p v-for="(firstParagraph, index) in firstParagraphSentences" :key="`first-${index}`" :class="{'first-paragraph': true, 'last-first-paragraph': index === firstParagraphSentences.length - 1}">
           {{ firstParagraph }}
         </p>
         <p v-for="(secondParagraph, index) in secondParagraphSentences" :key="`second-${index}`" class="second-paragraph">

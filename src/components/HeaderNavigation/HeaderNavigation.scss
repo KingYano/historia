@@ -9,11 +9,13 @@
 
   .header-navigation-command {
     text-transform: capitalize;
+    border-bottom: solid 0.5px;
+    color: var(--first-color-950);
   }
 
   .header-navigation-title {
     font-size: var(--medium-font);
-    font-weight: var(--medium-font-weight);
+    font-weight: var(--maximum-font-weight);
     text-transform: uppercase;
   }
 }
@@ -24,6 +26,7 @@
 
     .header-navigation-command {
       font-size: var(--medium-font);
+      border-bottom: unset;
     }
 
     .header-navigation-title {

@@ -1,13 +1,13 @@
 .painting-detail {
   height: 100%;
-  background: var(--first-color-50);
-  padding: 70px 30px 15px;
 
   &-text {
+    padding: 70px 30px 15px;
+    text-align: justify;
+
     &-title {
       font-size: var(--s-large-font);
-      font-weight: var(--normal-font-weight);
-      padding-bottom: 15px;
+      font-weight: var(--maximum-font-weight);
     }
 
     &-subtitle {
@@ -16,12 +16,12 @@
       padding-bottom: 15px;
     }
 
-    &-location {
-      padding-bottom: 10px;
+    &-location, &-characteristic {
+      font-weight: 100;
     }
 
     &-characteristic {
-      padding-bottom: 35px;
+      padding-bottom: 20px;
     }
 
     &-paragraph {
@@ -29,9 +29,8 @@
         padding-bottom: 10px;
       }
 
-      .first-paragraph:last-child {
+      .last-first-paragraph {
         padding-bottom: 25px;
-        border: solid red;
       }
 
       .second-paragraph:last-child {
@@ -42,13 +41,14 @@
   }
 
   &-image {
+    text-align: center;
+    padding-bottom: 25px;
+
     img {
       width: 376px;
       height: auto;
     }
   }
-
-
 }
 
 
