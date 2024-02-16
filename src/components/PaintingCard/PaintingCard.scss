@@ -1,0 +1,34 @@
+.painting-card {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 80%;
+  }
+
+  &-info {
+    position: absolute;
+    top: 20%;
+    height: 249px;
+    width: 100%;
+    background: rgba(40, 35, 34, 0.7);
+    color: var(--first-color-50);
+    padding: 25px 0 0 30px;
+
+    &-title {
+      font-size: var(--xx-large-font);
+      font-weight: var(--maximum-font-weight);
+      white-space: pre-wrap;
+      width: 90%;
+    }
+
+    &-date {
+      font-size: var(--medium-font);
+      font-weight: var(--medium-font-weight);
+    }
+  }
+}

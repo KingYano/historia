@@ -1,22 +1,34 @@
 <template>
-  <header-navigation></header-navigation>
+  <header-navigation
+    style="display: none"
+  ></header-navigation>
   <painting-detail
-      :main-title="mainTitle"
-      :sub-title="subTitle"
-      :info-location="infoLocation"
-      :info-characteristic="infoCharacteristic"
-      :first-paragraph="firstParagraph"
-      :second-paragraph="secondParagraph"
-      :imagePainting="imagePainting"
-      :imageAlt="imageAlt"
+    style="display: none"
+    :main-title="mainTitle"
+    :sub-title="subTitle"
+    :info-location="infoLocation"
+    :info-characteristic="infoCharacteristic"
+    :first-paragraph="firstParagraph"
+    :second-paragraph="secondParagraph"
+    :image-painting="imagePainting"
+    :image-alt="imageAlt"
   ></painting-detail>
-  <footer-information></footer-information>
+  <painting-card
+    :image-painting="imagePainting"
+    :image-alt="imageAlt"
+    :sub-title="subTitle"
+    :date-painting="datePainting"
+  ></painting-card>
+  <footer-information
+      style="display: none"
+  ></footer-information>
 </template>
 
 <script setup lang="ts">
   import HeaderNavigation from "@/components/HeaderNavigation/HeaderNavigation.vue";
   import PaintingDetail from "@/components/PaintingDetail/PaintingDetail.vue";
   import FooterInformation from "@/components/FooterInformation/FooterInformation.vue";
+  import PaintingCard from "@/components/PaintingCard/PaintingCard.vue";
   import { ref } from 'vue';
 
   const mainTitle = ref('Pandemonium');
@@ -27,6 +39,7 @@
   const secondParagraph = ref('In this painting, Martin depicts Pandemonium as a vast and imposing architectural structure, reflecting the grandeur and terror of Hell. The work is characterized by a dramatic contrast between light and darkness, with meticulous details and a monumental scale that amplify the sense of awe and majesty. The painting demonstrates Martin\'s talent for creating dramatic and apocalyptic landscapes, captivating the viewer with its intensity and imaginative portrayal of chaos and desolation.');
   const imagePainting = ref('src/assets/images/pandemonium_louvre.webp');
   const imageAlt = ref('Pandemonium painting John Martin')
+  const datePainting = ref('MDCCCXLI')
 </script>
 
 <style lang="scss">

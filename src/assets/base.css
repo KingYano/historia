@@ -1,4 +1,37 @@
-@import url('https://fonts.cdnfonts.com/css/pp-neue-montreal?styles=158867,158871,158869,158866');
+@font-face {
+  font-family: 'Jedira';
+  src: url('@/assets/fonts/jedira-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('@/assets/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('@/assets/fonts/NeueMontreal-Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('@/assets/fonts/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('@/assets/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   /*========== Colors ==========*/
@@ -107,4 +140,10 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+h1 {
+  font-family: 'Jedira', sans-serif;
+  font-weight: bold; /* Pour le style gras */
 }
