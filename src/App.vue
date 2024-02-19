@@ -1,27 +1,29 @@
 <template>
-  <header-navigation
-    style="display: none"
-  ></header-navigation>
-  <painting-detail
-    style="display: none"
-    :main-title="mainTitle"
-    :sub-title="subTitle"
-    :info-location="infoLocation"
-    :info-characteristic="infoCharacteristic"
-    :first-paragraph="firstParagraph"
-    :second-paragraph="secondParagraph"
-    :image-painting="imagePainting"
-    :image-alt="imageAlt"
-  ></painting-detail>
-  <painting-card
-    :image-painting="imagePainting"
-    :image-alt="imageAlt"
-    :sub-title="subTitle"
-    :date-painting="datePainting"
-  ></painting-card>
-  <footer-information
-      style="display: none"
-  ></footer-information>
+  <div v-if="!selectedPainting">
+    <div v-for="painting in paintings" :key="painting.id">
+      <painting-card
+          :image-painting="painting.imagePainting"
+          :image-alt="painting.imageAlt"
+          :sub-title="painting.subTitle"
+          :date-painting="painting.datePainting"
+          @cardClicked="() => showDetails(painting.id)"
+      ></painting-card>
+    </div>
+  </div>
+  <div v-else>
+    <header-navigation></header-navigation>
+    <painting-detail
+        :main-title="selectedPainting.mainTitle"
+        :sub-title="selectedPainting.subTitle"
+        :info-location="selectedPainting.infoLocation"
+        :info-characteristic="selectedPainting.infoCharacteristic"
+        :first-paragraph="selectedPainting.firstParagraph"
+        :second-paragraph="selectedPainting.secondParagraph"
+        :image-painting="selectedPainting.imagePainting"
+        :image-alt="selectedPainting.imageAlt"
+    ></painting-detail>
+    <footer-information></footer-information>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -30,18 +32,13 @@
   import FooterInformation from "@/components/FooterInformation/FooterInformation.vue";
   import PaintingCard from "@/components/PaintingCard/PaintingCard.vue";
   import { ref } from 'vue';
+  import type { Painting } from '@/data/paintingsData';
+  import { paintingsData } from '@/data/paintingsData';
 
-  const mainTitle = ref('Pandemonium');
-  const subTitle = ref('Chaos Unleashed');
-  const infoLocation = ref('John Martin (1789 - 1854), United Kingdom, 1841');
-  const infoCharacteristic = ref('Oil on canvas, 123 cm x 185 cm');
-  const firstParagraph = ref('The painting "Pandemonium" by John Martin is an iconic work of English Romanticism, created in 1841. It is inspired by John Milton\'s epic poem "Paradise Lost," which narrates the fall of man and Satan\'s rebellion against God. The term "Pandemonium" refers to the capital of Hell in the poem, constructed by demons.');
-  const secondParagraph = ref('In this painting, Martin depicts Pandemonium as a vast and imposing architectural structure, reflecting the grandeur and terror of Hell. The work is characterized by a dramatic contrast between light and darkness, with meticulous details and a monumental scale that amplify the sense of awe and majesty. The painting demonstrates Martin\'s talent for creating dramatic and apocalyptic landscapes, captivating the viewer with its intensity and imaginative portrayal of chaos and desolation.');
-  const imagePainting = ref('src/assets/images/pandemonium_louvre.webp');
-  const imageAlt = ref('Pandemonium painting John Martin')
-  const datePainting = ref('MDCCCXLI')
+  const paintings = ref<Painting[]>(paintingsData);
+  const selectedPainting = ref<Painting | null>(null);
+
+  const showDetails = (id: number) => {
+    selectedPainting.value = paintings.value.find(p => p.id === id) || null;
+  };
 </script>
-
-<style lang="scss">
-
-</style>
