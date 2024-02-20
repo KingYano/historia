@@ -2,12 +2,13 @@
   height: 100%;
 
   &-text {
-    padding: 70px 30px 15px;
+    padding: 50px 30px 15px;
     text-align: justify;
 
     &-title {
       font-size: var(--s-large-font);
       font-weight: var(--maximum-font-weight);
+      text-align: initial;
     }
 
     &-subtitle {

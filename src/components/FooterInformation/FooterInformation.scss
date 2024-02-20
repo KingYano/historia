@@ -1,15 +1,13 @@
+@import '@/assets/styles/mixins';
+
 .footer-information {
   text-align: center;
   padding-bottom: 15px;
 
   &-text {
     &-link {
-      text-decoration: none;
       color: black;
-      border-bottom: solid 0.5px;
-      &:hover {
-        color: var(--first-color-800);
-      }
+      @include reusable-link-style;
     }
   }
 }
@@ -17,8 +15,14 @@
 @media (min-width: 1024px) {
   .footer-information {
     &-text {
+      font-size: var(--medium-font);
       &-link {
         border-bottom: unset;
+
+        i {
+          font-size: var(--base-font);
+          vertical-align: text-top;
+        }
       }
     }
   }

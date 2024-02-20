@@ -1,6 +1,7 @@
+@import '@/assets/styles/mixins';
+
 .header-navigation {
   height: 121px;
-  width: 100vw;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -9,14 +10,15 @@
 
   .header-navigation-command {
     text-transform: capitalize;
-    border-bottom: solid 0.5px;
     color: var(--first-color-950);
+    @include reusable-link-style;
   }
 
   .header-navigation-title {
     font-size: var(--medium-font);
     font-weight: var(--maximum-font-weight);
     text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -26,7 +28,6 @@
 
     .header-navigation-command {
       font-size: var(--medium-font);
-      border-bottom: unset;
     }
 
     .header-navigation-title {

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!selectedPainting">
+  <section v-if="!selectedPainting">
     <div v-for="painting in paintings" :key="painting.id">
       <painting-card
           :image-painting="painting.imagePainting"
@@ -9,8 +9,8 @@
           @cardClicked="() => showDetails(painting.id)"
       ></painting-card>
     </div>
-  </div>
-  <div v-else>
+  </section>
+  <section v-else>
     <header-navigation @goBack="goBack" @goHome="goHome" @goNext="goNext"></header-navigation>
 
     <painting-detail
@@ -25,7 +25,7 @@
     ></painting-detail>
 
     <footer-information></footer-information>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
