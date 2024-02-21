@@ -6,6 +6,7 @@
           :image-alt="painting.imageAlt"
           :sub-title="painting.subTitle"
           :date-painting="painting.datePainting"
+          :painting-id="painting.id"
           @cardClicked="() => showDetails(painting.id)"
       ></painting-card>
     </div>

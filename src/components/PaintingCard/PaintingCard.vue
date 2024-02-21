@@ -7,6 +7,9 @@
         <h1 class="painting-card-info-title">{{ subTitle }}</h1>
         <p class="painting-card-info-date">{{ datePainting }}</p>
       </div>
+      <div class="painting-card-number">
+        <p>{{ paintingId }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -19,6 +22,7 @@ const props = defineProps({
   imageAltText: String,
   subTitle: String,
   datePainting: String,
+  paintingId: Number
 })
 
 const emit = defineEmits(['cardClicked']);

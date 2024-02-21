@@ -8,6 +8,7 @@
   .historia {
     height: 100%;
     display: flex;
+    overflow: hidden;
 
     .painting-cards {
       cursor: pointer;

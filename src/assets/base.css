@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'Haglueta';
+  src: url('@/assets/fonts/Haglueta-Klaristto.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'NeueMontreal';
   src: url('@/assets/fonts/NeueMontreal-Bold.otf') format('opentype');
   font-weight: 900;
@@ -48,7 +55,7 @@
   --first-color-900: #4d4441;
   --first-color-950: #282322;
 
-  --color-nmeric-number: #E40604;
+  --color-numeric-number: #E40604;
   --color-notwork-button: #D94D4D;
 
   --background--right-side: #dcdcdc;

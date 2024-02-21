@@ -1,6 +1,7 @@
 .painting-card {
   position: relative;
   height: 100vh;
+  overflow: hidden;
 
   &-wrapper {
     height: 100%;
@@ -32,6 +33,24 @@
 
     &-date {
       font-size: var(--medium-font);
+      font-weight: var(--medium-font-weight);
+    }
+  }
+
+  &-number {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 430px;
+
+    p {
+      font-family: 'Haglueta', sans-serif;
+      font-size: var(--mega-large-font);
+      color: var(--color-numeric-number);
       font-weight: var(--medium-font-weight);
     }
   }
