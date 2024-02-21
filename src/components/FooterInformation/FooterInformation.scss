@@ -12,7 +12,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1185px) {
   .footer-information {
     &-text {
       font-size: var(--medium-font);
@@ -20,8 +20,7 @@
         border-bottom: unset;
 
         i {
-          font-size: var(--base-font);
-          vertical-align: text-top;
+          font-size: var(--medium-large-font);
         }
       }
     }

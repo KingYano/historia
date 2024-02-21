@@ -1,6 +1,6 @@
 <template>
-  <section v-if="!selectedPainting">
-    <div v-for="painting in paintings" :key="painting.id">
+  <section class="historia" v-if="!selectedPainting">
+    <div class="painting-cards" v-for="painting in paintings" :key="painting.id">
       <painting-card
           :image-painting="painting.imagePainting"
           :image-alt="painting.imageAlt"

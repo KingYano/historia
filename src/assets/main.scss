@@ -1,9 +1,22 @@
 @import './base.css';
 
 #app {
-  background: var(--first-color-50);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1185px) {
+  .historia {
+    height: 100%;
+    display: flex;
+
+    .painting-cards {
+      cursor: pointer;
+      flex: 1;
+    }
+  }
+}
+
+@media (min-width: 3200px) {
 
 }
+
+
