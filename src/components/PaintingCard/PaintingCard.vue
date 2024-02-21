@@ -1,31 +1,38 @@
 <template>
   <section class="painting-card" v-on:click="handleClick">
-    <a class="painting-card-button">
-      <img class="painting-card-image" :src="imagePainting" :alt="imageAltText">
+    <div class="painting-card-wrapper">
+      <img :class="['painting-card-image', imageClass]" :src="imagePainting" :alt="imageAltText">
+      <div class="painting-card-overlay"></div>
       <div class="painting-card-info">
         <h1 class="painting-card-info-title">{{ subTitle }}</h1>
         <p class="painting-card-info-date">{{ datePainting }}</p>
       </div>
-    </a>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 
-  const props = defineProps({
-    imagePainting: String,
-    imageAltText: String,
-    subTitle: String,
-    datePainting: String,
-  })
+const props = defineProps({
+  imagePainting: String,
+  imageAltText: String,
+  subTitle: String,
+  datePainting: String,
+})
 
-  const emit = defineEmits(['cardClicked']);
+const emit = defineEmits(['cardClicked']);
 
-  const handleClick = () => {
-    emit('cardClicked');
-  }
+const imageClass = computed(() => {
+  const formattedSubTitle = props.subTitle.replace(/\s+/g, '-').toLowerCase();
+  return `painting-card-image-${formattedSubTitle}`;
+});
+
+const handleClick = () => {
+  emit('cardClicked');
+}
 </script>
 
 <style lang="scss">
-  @import "PaintingCard";
+@import "PaintingCard";
 </style>

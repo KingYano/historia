@@ -1,6 +1,7 @@
 @import './base.css';
 
 #app {
+  overflow-y: hidden;
 }
 
 @media (min-width: 1185px) {
