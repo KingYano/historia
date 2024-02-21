@@ -26,3 +26,11 @@
     }
   }
 }
+
+@media (min-width: 3200px) {
+  .footer-information {
+    &-text {
+      font-size: var(--extra-large-font);
+    }
+  }
+}

@@ -10,7 +10,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 80%;
+    object-position: 65%;
   }
 
   &-info {
@@ -32,6 +32,21 @@
     &-date {
       font-size: var(--medium-font);
       font-weight: var(--medium-font-weight);
+    }
+  }
+}
+
+@media (min-width: 3200px) {
+  .painting-card {
+    &-info {
+
+      &-title {
+        font-size: var(--ultra-large-font);
+      }
+
+      &-date {
+        font-size: var(--large-font);
+      }
     }
   }
 }

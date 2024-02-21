@@ -67,6 +67,8 @@
 
 
   /*========== Font and typography ==========*/
+  --mega-large-font: 7.5rem; /* 120px */
+  --ultra-large-font: 5rem; /* 80px */
   --extra-large-font: 3.75rem; /* 60px */
   --xx-large-font: 3.125rem; /* 50px */
   --x-large-font: 2.75rem; /* 44px */

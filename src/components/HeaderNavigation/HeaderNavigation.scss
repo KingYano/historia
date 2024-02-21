@@ -35,3 +35,17 @@
     }
   }
 }
+
+@media (min-width: 3200px) {
+  .header-navigation {
+    height: 182px;
+
+    .header-navigation-command {
+      font-size: var(--x-large-font);
+    }
+
+    .header-navigation-title {
+      font-size: var(--extra-large-font);
+    }
+  }
+}
