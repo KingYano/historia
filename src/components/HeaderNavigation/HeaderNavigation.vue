@@ -1,8 +1,8 @@
 <template>
   <header class="header-navigation">
-    <p class="header-navigation-command header-navigation-previous" @click="goBack">Previous</p>
+    <a class="header-navigation-command header-navigation-previous" @click="goBack">Previous</a>
     <h1 class="header-navigation-title" @click="goHome">Historia</h1>
-    <p class="header-navigation-command header-navigation-next" @click="goNext">Next</p>
+    <a class="header-navigation-command header-navigation-next" @click="goNext">Next</a>
   </header>
 </template>
 

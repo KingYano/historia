@@ -8,13 +8,14 @@
   justify-content: space-between;
   background: var(--first-color-100);
 
-  .header-navigation-command {
+  &-command {
     text-transform: capitalize;
     color: var(--first-color-950);
-    @include reusable-link-style;
+    cursor: pointer;
+    border-bottom: solid 2px;
   }
 
-  .header-navigation-title {
+  &-title {
     font-size: var(--medium-font);
     font-weight: var(--maximum-font-weight);
     text-transform: uppercase;
@@ -26,11 +27,13 @@
   .header-navigation {
     padding: 0 70px;
 
-    .header-navigation-command {
+    &-command {
+      border-bottom: unset;
       font-size: var(--medium-font);
+      @include reusable-link-style;
     }
 
-    .header-navigation-title {
+    &-title {
       font-size: var(--s-large-font);
     }
   }

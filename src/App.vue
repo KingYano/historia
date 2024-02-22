@@ -1,5 +1,5 @@
 <template>
-  <section class="historia" v-if="!selectedPainting">
+  <section class="painting-app" v-if="!selectedPainting">
     <div class="painting-cards" v-for="painting in paintings" :key="painting.id">
       <painting-card
           :image-painting="painting.imagePainting"

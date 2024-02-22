@@ -6,8 +6,8 @@
 
   &-text {
     &-link {
-      color: black;
-      @include reusable-link-style;
+      color: var(--first-color-950);
+      border-bottom: solid 2px;
     }
   }
 }
@@ -18,6 +18,11 @@
       font-size: var(--medium-font);
       &-link {
         border-bottom: unset;
+        @include reusable-link-style;
+
+        &:hover {
+          color: var(--first-color-800);
+        }
 
         i {
           font-size: var(--medium-large-font);

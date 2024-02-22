@@ -38,5 +38,5 @@ const handleClick = () => {
 </script>
 
 <style lang="scss">
-@import "PaintingCard";
+  @import "PaintingCard";
 </style>
