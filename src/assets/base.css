@@ -14,29 +14,29 @@
 
 @font-face {
   font-family: 'NeueMontreal';
-  src: url('@/assets/fonts/NeueMontreal-Bold.otf') format('opentype');
-  font-weight: 900;
+  src: url('@/assets/fonts/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'NeueMontreal';
   src: url('@/assets/fonts/NeueMontreal-Light.otf') format('opentype');
-  font-weight: 300; /* Light */
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'NeueMontreal';
   src: url('@/assets/fonts/NeueMontreal-Medium.otf') format('opentype');
-  font-weight: 500; /* Medium */
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'NeueMontreal';
-  src: url('@/assets/fonts/NeueMontreal-Regular.otf') format('opentype');
-  font-weight: normal;
+  src: url('@/assets/fonts/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -58,8 +58,8 @@
   --color-numeric-number: #E40604;
   --color-notwork-button: #D94D4D;
 
-  --background--right-side: #dcdcdc;
-  --background-icon-card: #D0CCC6;
+  --background--border: #d0ccc6;
+  --background-icon-card: #dfdbd7;
 
   --border-color-button: rgba(152, 152, 152, 0.50);
   --border-shadow-button: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);

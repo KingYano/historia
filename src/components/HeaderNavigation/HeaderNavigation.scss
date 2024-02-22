@@ -12,10 +12,11 @@
     text-transform: capitalize;
     color: var(--first-color-950);
     cursor: pointer;
-    border-bottom: solid 2px;
   }
 
   &-title {
+    text-decoration: none;
+    color: var(--first-color-950);
     font-size: var(--medium-font);
     font-weight: var(--maximum-font-weight);
     text-transform: uppercase;

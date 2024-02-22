@@ -63,6 +63,15 @@
     width: 25vw;
     height: 100vh;
 
+    &:not(:last-child) {
+      border-right: solid 2px var(--background--border);
+    }
+
+    &-info {
+      background: unset;
+      color: var(--first-color-950);
+    }
+
     &-overlay {
       position: absolute;
       width: 100%;
@@ -81,8 +90,13 @@
       &:hover .painting-card-image {
         transform: scale(1);
       }
-    }
 
+      &:hover .painting-card-info {
+        background: rgba(40, 35, 34, 0.7);
+        color: var(--first-color-50);
+        transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+      }
+    }
 
     &-image {
       position: absolute;

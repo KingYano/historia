@@ -7,12 +7,12 @@
 @media (min-width: 1185px) {
   .painting-app {
     height: 100%;
-    display: flex;
     overflow: hidden;
 
     .painting-cards {
       cursor: pointer;
       flex: 1;
+      display: flex;
     }
   }
 }

@@ -1,7 +1,9 @@
 <template>
   <section class="painting-app" v-if="!selectedPainting">
-    <div class="painting-cards" v-for="painting in paintings" :key="painting.id">
+    <div class="painting-cards">
       <painting-card
+          v-for="painting in paintings"
+          :key="painting.id"
           :image-painting="painting.imagePainting"
           :image-alt="painting.imageAlt"
           :sub-title="painting.subTitle"
@@ -63,3 +65,5 @@
     selectedPainting.value = paintings.value[prevIndex];
   };
 </script>
+
+
