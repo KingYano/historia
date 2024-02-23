@@ -18,7 +18,7 @@ export const paintingsData: Painting[] = [
         subTitle: 'Chaos Unleashed',
         infoLocation: 'John Martin (1789 - 1854), United Kingdom, 1841',
         infoCharacteristic: 'Oil on canvas, 123 cm x 185 cm',
-        firstParagraph: 'TThe painting "Pandemonium" by John Martin is an iconic work of English Romanticism, created in 1841. It is inspired by John Milton\'s epic poem "Paradise Lost," which narrates the fall of man and Satan\'s rebellion against God. The term "Pandemonium" refers to the capital of Hell in the poem, constructed by demons.',
+        firstParagraph: 'The painting "Pandemonium" by John Martin is an iconic work of English Romanticism, created in 1841. It is inspired by John Milton\'s epic poem "Paradise Lost," which narrates the fall of man and Satan\'s rebellion against God. The term "Pandemonium" refers to the capital of Hell in the poem, constructed by demons.',
         secondParagraph: 'In this painting, Martin depicts Pandemonium as a vast and imposing architectural structure, reflecting the grandeur and terror of Hell. The work is characterized by a dramatic contrast between light and darkness, with meticulous details and a monumental scale that amplify the sense of awe and majesty. The painting demonstrates Martin\'s talent for creating dramatic and apocalyptic landscapes, captivating the viewer with its intensity and imaginative portrayal of chaos and desolation.',
         imagePainting: 'src/assets/images/pandemonium_louvre.webp',
         imageAlt: 'Pandemonium painting John Martin',
