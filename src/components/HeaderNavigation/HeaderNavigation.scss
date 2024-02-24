@@ -12,6 +12,7 @@
     text-transform: capitalize;
     color: var(--first-color-950);
     cursor: pointer;
+    text-decoration: underline;
   }
 
   &-title {
@@ -32,6 +33,7 @@
       border-bottom: unset;
       font-size: var(--medium-font);
       @include reusable-link-style;
+      text-decoration: none;
     }
 
     &-title {
