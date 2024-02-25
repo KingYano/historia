@@ -28,7 +28,7 @@ const props = defineProps({
 const emit = defineEmits(['cardClicked']);
 
 const imageClass = computed(() => {
-  const formattedSubTitle = props.subTitle.replace(/\s+/g, '-').toLowerCase();
+  const formattedSubTitle = props.subTitle!.replace(/\s+/g, '-').toLowerCase();
   return `painting-card-image-${formattedSubTitle}`;
 });
 
