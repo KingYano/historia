@@ -11,6 +11,7 @@
           :painting-id="painting.id"
           @cardClicked="() => showDetails(painting.id)"
       ></painting-card>
+      <div class="scroll-btn"></div>
     </div>
   </section>
   <section v-else>

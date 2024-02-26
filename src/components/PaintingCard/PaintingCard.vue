@@ -15,26 +15,26 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+  import { computed } from "vue";
 
-const props = defineProps({
-  imagePainting: String,
-  imageAlt: String,
-  subTitle: String,
-  datePainting: String,
-  paintingId: Number
-})
+  const props = defineProps({
+    imagePainting: String,
+    imageAlt: String,
+    subTitle: String,
+    datePainting: String,
+    paintingId: Number
+  })
 
-const emit = defineEmits(['cardClicked']);
+  const emit = defineEmits(['cardClicked']);
 
-const imageClass = computed(() => {
-  const formattedSubTitle = props.subTitle!.replace(/\s+/g, '-').toLowerCase();
-  return `painting-card-image-${formattedSubTitle}`;
-});
+  const imageClass = computed(() => {
+    const formattedSubTitle = props.subTitle!.replace(/\s+/g, '-').toLowerCase();
+    return `painting-card-image-${formattedSubTitle}`;
+  });
 
-const handleClick = () => {
-  emit('cardClicked');
-}
+  const handleClick = () => {
+    emit('cardClicked');
+  }
 </script>
 
 <style lang="scss">

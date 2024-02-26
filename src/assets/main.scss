@@ -2,6 +2,56 @@
 
 #app {
   overflow-y: hidden;
+
+  .painting-cards {
+    .scroll-btn {
+      position: fixed;
+      height: 55px;
+      width: 35px;
+      border: 2px solid #ffffff;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: 40px;
+      border-radius: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 9px;
+        height: 9px;
+        width: 9px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        animation: move-down 2s infinite;
+      }
+
+      @keyframes move-down {
+        80% { opacity: 0.5; }
+        100% {
+          transform: translateY(32px);
+          opacity: 0;
+        }
+      }
+
+      &:after {
+        content: "SCROLL";
+        position: absolute;
+        width: 96px;
+        display: block;
+        text-align: center;
+        left: -28px;
+        bottom: -25px;
+        font-size: 12px;
+        color: #ffffff;
+        letter-spacing: 2px;
+        font-weight: 600;
+      }
+    }
+  }
 }
 
 @media (min-width: 1185px) {
@@ -13,6 +63,10 @@
       cursor: pointer;
       flex: 1;
       display: flex;
+
+      .scroll-btn {
+        display: none;
+      }
     }
   }
 }
