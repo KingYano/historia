@@ -46,8 +46,13 @@
   const paintings = ref<Painting[]>(paintingsData);
   const selectedPainting = ref<Painting | null>(null);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const showDetails = (id: number) => {
     selectedPainting.value = paintings.value.find(p => p.id === id) || null;
+    scrollToTop();
   };
 
   const goHome = () => {
