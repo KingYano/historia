@@ -9,5 +9,5 @@
 </script>
 
 <style lang="scss">
-@import 'FooterInformation';
+  @import 'FooterInformation';
 </style>

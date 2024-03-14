@@ -1,13 +1,14 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import App from '@/App.vue';
 import PaintingCard from '@/components/PaintingCard/PaintingCard.vue';
 import PaintingDetail from '@/components/PaintingDetail/PaintingDetail.vue';
 import HeaderNavigation from '@/components/HeaderNavigation/HeaderNavigation.vue';
-import { paintingsData } from '@/data/paintingsData';
+import { paintingsData} from '@/data/paintingsData';
+import type { Painting } from '@/data/paintingsData';
+import {isRef, ref} from "vue";
 
 describe('App.vue', () => {
-
     it('renders PaintingCard components for each painting initially', () => {
         const wrapper = mount(App);
         expect(wrapper.findAllComponents(PaintingCard).length).toBeGreaterThan(0);
@@ -19,6 +20,17 @@ describe('App.vue', () => {
         await wrapper.findAllComponents(PaintingCard)[0].trigger('click');
         expect(wrapper.findComponent(PaintingDetail).exists()).toBe(true);
         expect(wrapper.findAllComponents(PaintingCard).length).toBe(0);
+    });
+
+    it('displays the correct painting when a PaintingCard is clicked', async () => {
+        const wrapper = mount(App);
+        const firstPaintingId = paintingsData[0].id;
+
+        await wrapper.findAllComponents(PaintingCard)[0].vm.$emit('cardClicked', firstPaintingId);
+        await wrapper.vm.$nextTick();
+
+        const paintingDetailWrapper = wrapper.findComponent(PaintingDetail);
+        expect(paintingDetailWrapper.props('mainTitle')).toBe(paintingsData[0].mainTitle);
     });
 
     it('navigates to the next painting when goNext is triggered', async () => {
@@ -95,5 +107,32 @@ describe('App.vue', () => {
         await wrapper.vm.$nextTick();
         const lastPaintingTitle = paintingsData[paintingsData.length - 1].mainTitle;
         expect(wrapper.findComponent(PaintingDetail).props('mainTitle')).toBe(lastPaintingTitle);
+    });
+
+    it('sets selectedPainting to null when no painting with the given id is found', async () => {
+        const wrapper = mount(App);
+        const nonExistentPaintingId = paintingsData.length + 1;
+
+        await wrapper.vm.showDetails(nonExistentPaintingId);
+        await wrapper.vm.$nextTick();
+
+        expect(wrapper.vm.selectedPainting).toBeNull();
+    });
+
+    it('navigates to the first painting when goNext is triggered on the last painting', async () => {
+        const wrapper = mount(App);
+        const lastPaintingId = paintingsData[paintingsData.length - 1].id;
+
+        await wrapper.vm.showDetails(lastPaintingId);
+        await wrapper.vm.$nextTick();
+
+        wrapper.vm.goNext();
+        await wrapper.vm.$nextTick();
+
+        if (wrapper.vm.selectedPainting === null) {
+            throw new Error('selectedPainting est null');
+        }
+
+        expect(wrapper.vm.selectedPainting.mainTitle).toBe(paintingsData[0].mainTitle);
     });
 });

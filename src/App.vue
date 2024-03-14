@@ -70,6 +70,12 @@
     const prevIndex = currentIndex > 0 ? currentIndex - 1 : paintings.value.length - 1;
     selectedPainting.value = paintings.value[prevIndex];
   };
+
+  defineExpose({
+    showDetails,
+    selectedPainting,
+    goNext
+  });
 </script>
 
 
